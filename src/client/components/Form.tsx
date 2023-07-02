@@ -23,6 +23,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
 
     const nameIsValid = Boolean(name.trim());
     const phoneIsValid = process.env.BUG_ID !== '10' ? PHONE_REGEX.test(phone.trim()) : false;
+    console.log({phoneIsValid});
     const addressIsValid = Boolean(address.trim());
 
     const onChangeName = useCallback((e: ChangeEvent<HTMLInputElement>) => {
